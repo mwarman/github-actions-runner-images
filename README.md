@@ -16,7 +16,7 @@ The Dockerfile requires the following arguments to build an image. Some argument
 
 Arguments for a Linux image:
 
-```bash
+```
 TARGETOS=linux
 TARGETARCH=amd64
 RUNNER_VERSION=2.308.0
@@ -24,11 +24,13 @@ RUNNER_CONTAINER_HOOKS_VERSION=0.3.2
 DOCKER_VERSION=23.0.6
 ```
 
-## Build Image
+## Build the Image
 
 Run the following command from the project base directory to build a Linux action runner.
 
-```bash
+> **TIP:** Update the tag name to the desired image name.
+
+```
 docker build \
   --build-arg TARGETOS=linux \
   --build-arg TARGETARCH=amd64 \
@@ -40,6 +42,8 @@ docker build \
 ## Pod Spec
 
 This is an example of a pod spec with the init container copying assets to the runner directory.
+
+> **TIP:** Update the YAML with the your pod and image names.
 
 ```yaml
 apiVersion: v1
